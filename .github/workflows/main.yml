@@ -56,7 +56,6 @@ jobs:
       - name: Publish Artifact
         uses: actions/checkout@v4.1.7
         with:
-          name: linuxBuild
           path: 'export/release/linux/bin' 
   buildWindows:
     runs-on: windows-latest
@@ -98,7 +97,6 @@ jobs:
       - name: Publish Artifact
         uses: actions/checkout@v4.1.7
         with:
-          name: windowsBuild
           path: export/release/windows/bin
   buildMac:
     runs-on: macos-latest
@@ -138,5 +136,4 @@ jobs:
       - name: Publish Artifact
         uses: actions/checkout@v4.1.7
         with:
-          name: macBuild
           path: export/release/macos/bin

@@ -251,6 +251,7 @@ class Paths
 	{
 		// streamlined the assets process more
 		var returnAsset:FlxGraphic = returnGraphic(key, library);
+		returnAsset.bitmap.disposeImage();
 		return returnAsset;
 	}
 

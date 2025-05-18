@@ -1,5 +1,6 @@
 package flixel.addons.transition;
 
+
 import flixel.FlxSubState;
 import flixel.util.FlxGradient;
 import flixel.addons.transition.FlxTransitionSprite.TransitionStatus;

@@ -1,5 +1,6 @@
 package;
 
+import flixel.math.FlxRect;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;
@@ -316,7 +317,7 @@ class Note extends FlxSprite
 				case 3:
 					animation.play('redholdend');
 			}
-
+	
 			updateHitbox();
 
 			offsetX -= width / 2;
@@ -561,17 +562,7 @@ class Note extends FlxSprite
 		}
 
 		var actualHitbox:Float = hitbox * earlyHitMult;
-		/*if(mustPress){
-			var diff = (strumTime-Conductor.songPosition);
-			var absDiff = Math.abs(diff);
-			canBeHit = absDiff<=actualHitbox;
 
-			if (strumTime < Conductor.songPosition - Conductor.safeZoneOffset && !wasGoodHit)
-				tooLate = true;
-		}else{
-			var diff = (strumTime-Conductor.songPosition);
-			canBeHit = isSustainNote && prevNote.wasGoodHit && prevNote!=null && diff<=actualHitbox || diff<=0;
-		}*/
 
 		var diff = (strumTime - Conductor.songPosition);
 		noteDiff = diff;
@@ -587,6 +578,17 @@ class Note extends FlxSprite
 			if (alpha > 0.3)
 				alpha = 0.3;
 		}
+	}
+	public var pubicHair:FlxSprite;
+	public var s = false;
+
+	override function set_clipRect(_rect:FlxRect) {
+		clipRect = _rect;
+
+		if(frames != null)
+			frame  = frames.frames[animation.frameIndex];
+
+		return clipRect = _rect;
 	}
 
 	override public function destroy(){

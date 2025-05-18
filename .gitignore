@@ -9,6 +9,8 @@ art/test_x64-debug-officialrelease.bat
 export/*
 .vscode/*
 *.code-workspace
+# haxe libraries gonna take a big amount of the repo size, no one wants the cloning process to take forever. therefore im excluding .haxelib
+.haxelib/*
 # Local history which shouldn't be shared.
 .history
 .ionide

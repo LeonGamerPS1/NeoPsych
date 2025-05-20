@@ -59,21 +59,22 @@ jobs:
       - name: "pack export"
         run:
          powershell
-         Compress-Archive D:\a\NeoPsych\NeoPsych\export\windows\bin D:\a\NeoPsych\NeoPsych\win64.zip         
-      - name: Publish Artifact
-        uses: actions/checkout@v4.1.7
-        with:
-          path: export/release/windows/bin
+         Compress-Archive D:\a\NeoPsych\NeoPsych\export\windows\bin D:\a\NeoPsych\NeoPsych\win64.zip 
       - name: create ass release
         uses: actions/create-release@v1
         id: create_release
         with:
-          draft: false
-          prerelease: true
-          release_name: ${{ github.run_id }}
-          tag_name: ${{github.run_id}}  
-          body_path: D:\a\NeoPsych\NeoPsych\win64.zip
+           draft: false
+           prerelease: true
+           release_name: ${{ github.run_id }}
+           tag_name: ${{github.run_id}}  
+           body_path: D:\a\NeoPsych\NeoPsych\win64.zip
         env:
-            GITHUB_TOKEN: ${{ github.token }}
+             GITHUB_TOKEN: ${{ github.token }}                 
+      - name: Publish Artifact
+        uses: actions/checkout@v4.1.7
+        with:
+          path: export/release/windows/bin
+
 
 

@@ -1,4 +1,4 @@
-package;
+package funkin.backend;
 
 import animateatlas.AtlasFrameMaker;
 import flixel.math.FlxPoint;

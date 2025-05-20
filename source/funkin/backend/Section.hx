@@ -1,4 +1,5 @@
-package;
+package funkin.backend;
+
 
 typedef SwagSection =
 {

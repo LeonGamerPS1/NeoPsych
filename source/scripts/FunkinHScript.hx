@@ -147,7 +147,6 @@ class FunkinHScript extends FunkinScript
 		set("Boyfriend", Boyfriend);
 		set("StageData", StageData);
 		set("DialogueBox", DialogueBoxPsych);
-		set("FlxVideo", FlxVideo);
 		set("PlayState", PlayState);
 		set("PlayField", PlayField);
 		set("FunkinLua", FunkinLua);

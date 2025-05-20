@@ -8,8 +8,6 @@ import Discord.DiscordClient;
 #end
 import openfl.system.Capabilities;
 import flixel.system.scaleModes.*;
-import Section.SwagSection;
-import Song.SwagSong;
 import WiggleEffect.WiggleEffectType;
 import flixel.FlxBasic;
 import flixel.FlxCamera;
@@ -61,10 +59,8 @@ import flixel.effects.particles.FlxEmitter;
 import flixel.effects.particles.FlxParticle;
 import flixel.util.FlxSave;
 import animateatlas.AtlasFrameMaker;
-import Achievements;
 import StageData;
 import DialogueBoxPsych;
-import Conductor.Rating;
 import flixel.system.FlxAssets.FlxShader;
 #if sys
 import sys.FileSystem;

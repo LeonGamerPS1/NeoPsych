@@ -1,6 +1,6 @@
-package;
+package funkin.backend;
 
-import Song.SwagSong;
+
 
 /**
  * ...

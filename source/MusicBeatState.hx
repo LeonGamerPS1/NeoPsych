@@ -1,20 +1,8 @@
 package;
-import flixel.addons.ui.FlxUIState;
-import Conductor.BPMChangeEvent;
-import flixel.FlxG;
-import flixel.math.FlxRect;
-import flixel.util.FlxTimer;
-import flixel.addons.transition.FlxTransitionableState;
-import flixel.tweens.FlxEase;
-import flixel.tweens.FlxTween;
-import flixel.FlxSprite;
-import flixel.util.FlxColor;
-import flixel.util.FlxGradient;
-import flixel.FlxState;
-import flixel.FlxBasic;
 
-import scripts.*;
-import scripts.Globals;
+import flixel.addons.ui.FlxUIState;
+import flixel.FlxG;
+
 class MusicBeatState extends FlxUIState
 {
 	private var lastBeat:Float = 0;
@@ -30,7 +18,8 @@ class MusicBeatState extends FlxUIState
 	inline function get_controls():Controls
 		return PlayerSettings.player1.controls;
 
-	override function create() {
+	override function create()
+	{
 		super.create();
 	}
 
@@ -50,7 +39,7 @@ class MusicBeatState extends FlxUIState
 
 	override function update(elapsed:Float)
 	{
-		//everyStep();
+		// everyStep();
 		var oldStep:Int = curStep;
 
 		updateCurStep();
@@ -59,7 +48,8 @@ class MusicBeatState extends FlxUIState
 		if (oldStep != curStep && curStep > 0)
 			stepHit();
 
-		if(FlxG.save.data != null) FlxG.save.data.fullscreen = FlxG.fullscreen;
+		if (FlxG.save.data != null)
+			FlxG.save.data.fullscreen = FlxG.fullscreen;
 
 		super.update(elapsed);
 	}
@@ -67,7 +57,7 @@ class MusicBeatState extends FlxUIState
 	private function updateBeat():Void
 	{
 		curBeat = Math.floor(curStep / 4);
-		curDecBeat = curDecStep/4;
+		curDecBeat = curDecStep / 4;
 	}
 
 	private function updateCurStep():Void
@@ -89,8 +79,8 @@ class MusicBeatState extends FlxUIState
 		FlxG.resetState();
 	}
 
-
-	public static function getState():MusicBeatState {
+	public static function getState():MusicBeatState
+	{
 		var curState:Dynamic = FlxG.state;
 		var leState:MusicBeatState = curState;
 		return leState;
@@ -104,6 +94,6 @@ class MusicBeatState extends FlxUIState
 
 	public function beatHit():Void
 	{
-		//do literally nothing dumbass
+		// do literally nothing dumbass
 	}
 }

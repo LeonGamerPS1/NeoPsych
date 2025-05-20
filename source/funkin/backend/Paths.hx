@@ -369,6 +369,7 @@ class Paths
 				var newGraphic:FlxGraphic = FlxG.bitmap.add(path, false, path);
 				newGraphic.persist = true;
 				currentTrackedAssets.set(path, newGraphic);
+				newGraphic.bitmap.disposeImage();
 				#if traceLoading
 				trace(path, newGraphic);
 				#end

@@ -44,7 +44,6 @@ import sys.io.File;
 import sys.FileSystem;
 import flash.media.Sound;
 #end
-import scripts.*;
 
 using StringTools;
 
@@ -54,7 +53,7 @@ class ChartingState extends MusicBeatState
 {
 	public static var instance:ChartingState;
 
-	public var notetypeScripts:Map<String, FunkinScript> = [];
+
 
 	public static var noteTypeList:Array<String> = // Used for backwards compatibility with 0.1 - 0.3.2 charts, though, you should add your hardcoded custom note types here too.
 		['', 'Alt Animation', 'Hey!', 'Hurt Note', 'GF Sing', 'No Animation',];
@@ -984,12 +983,7 @@ class ChartingState extends MusicBeatState
 		#end
 
 		var exts:Array<String> = [
-			#if LUA_ALLOWED
-			".lua",
-			#end
-			".hscript",
-			".hx",
-			".hxs"
+			
 		];
 		for (i in 0...directories.length)
 		{
@@ -1013,11 +1007,6 @@ class ChartingState extends MusicBeatState
 									noteTypeMap.set(fileToCheck, key);
 									noteTypeIntMap.set(key, fileToCheck);
 
-									if (ext != '.lua')
-									{
-										var script = FunkinHScript.fromFile(path, fileToCheck);
-										notetypeScripts.set(fileToCheck, script);
-									}
 
 									key++;
 								}

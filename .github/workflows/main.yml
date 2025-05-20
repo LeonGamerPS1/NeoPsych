@@ -59,7 +59,7 @@ jobs:
       - name: "pack export"
         run:
          powershell
-         Compress-Archive D:\a\NeoPsych\NeoPsych\export\windows\bin D:\a\NeoPsych\NeoPsych\win64.zip 
+         Compress-Archive D:\a\NeoPsych\NeoPsych\export\release\windows\bin D:\a\NeoPsych\NeoPsych\win64.zip 
       - name: create ass release
         uses: actions/create-release@v1
         id: create_release
